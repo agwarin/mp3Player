@@ -1,6 +1,8 @@
 /*************************************************** 
-  This is an example for the Adafruit VS1053 Codec Breakout
-
+  This code was written by Niki Selken for Adafruit VS1053 Codec Breakout
+  It creates a playlist feature for the music maker shield.
+  It also works with the sharp distance sensor to trigger the track. 
+  
   Designed specifically to work with the Adafruit VS1053 Codec Breakout 
   ----> https://www.adafruit.com/products/1381
 
@@ -88,28 +90,24 @@ playsong =  false;
 //IsAnySongPlaying= musicPlayer.playingMusic();
 thisPin = 0;
 
-
- Serial.println(" Ready Track");
-Serial.println ("/1.mp3");
-musicPlayer.playFullFile("/1.mp3");
-
-
-  //Serial.println(nextSong);
-  //musicPlayer.playFullFile("\""+nextSong+"\"");
 }
 
 void loop() {
-    int distance = sensor.getDistance(); //Calculate the distance in centimeters and store the value in a variable
+//Distance sensor reading
+int distance = sensor.getDistance(); //Calculate the distance in centimeters and store the value in a variable
 Serial.println( distance ); //Print the value to the serial monitor
 delay(10);
+
 if (distance < 4){
   playsong = true;
  
   if (playsong ==  true){
 
-    //track number
+//track number
     val;
-    //play each song and increase track number (val)  by  one after playing.
+    
+//play each song and increase track number (val) by one after playing.
+//Just add new numbered cases for each song.
 switch (val) {
 
       case 1:
