@@ -113,9 +113,10 @@ switch (val) {
       case 1:
       Serial.println(" Ready Track");
       Serial.println(val);
-          // Play one file, don't return until complete
+      // Play one file, don't return until complete
       musicPlayer.playFullFile("1.mp3");
-      delay(500);
+      delay(100);
+      //increase val to play next track
       val = val + 1;
       Serial.println(" Ready Track");
       Serial.println (val); 
@@ -149,19 +150,8 @@ switch (val) {
   }
 
 
-//if (playingMusic==false) { SongNumber++; musicPlayer.playTrack(SongNumber); }
-  // Play another file in the background, REQUIRES interrupts!
- // Serial.println(F("Playing track 002"));
- // musicPlayer.startPlayingFile("/track002.mp3");
-
     }
-  // File is playing in the background
-//  if (musicPlayer.stopped()) {
-//    Serial.println("Done playing music");
-//    while (1) {
-//      delay(10);  // we're done! do nothing...
-//    }
-//  }
+
   if (Serial.available()) {
     char c = Serial.read();
     
