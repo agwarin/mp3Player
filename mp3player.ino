@@ -17,18 +17,8 @@
 #include <Adafruit_VS1053.h>
 #include <SD.h>
 bool playsong = false;
-bool playsong2 = false;
-bool playsong3 = false;
-bool playsong4 = false;
-bool playsong5 = false;
-bool playsong6 = false;
-bool playsong7 = false;
-bool playsong8 = false;
-int IsAnySongPlaying; 
-int songNumber = 1;
-String stringOne = "/";
-String stringTwo = ".mp3";
-String stringThree;
+int thisPin;
+int val = 1;
 
 //import the library in the sketch
 #include <SharpIR.h>
@@ -77,7 +67,7 @@ playsong =  false;
   Serial.println(F("VS1053 found"));
   
    if (!SD.begin(CARDCS)) {
-    Serial.println(F("SD failed, or not present"));
+    Serial.println(("SD failed, or not present"));
     while (1);  // don't do anything more
   }
 
@@ -94,9 +84,18 @@ playsong =  false;
   // audio playing
  // musicPlayer.useInterrupt(VS1053_FILEPLAYER_PIN_INT);  // DREQ int
   
-int songNumber = 1;
+//int songNumber = 1;
 //IsAnySongPlaying= musicPlayer.playingMusic();
-Serial.println (songNumber);
+thisPin = 0;
+
+
+ Serial.println(" Ready Track");
+Serial.println ("/1.mp3");
+musicPlayer.playFullFile("/1.mp3");
+
+
+  //Serial.println(nextSong);
+  //musicPlayer.playFullFile("\""+nextSong+"\"");
 }
 
 void loop() {
@@ -105,31 +104,57 @@ Serial.println( distance ); //Print the value to the serial monitor
 delay(10);
 if (distance < 4){
   playsong = true;
-
-
+ 
   if (playsong ==  true){
-    // Play one file, don't return until complete
-  Serial.println(("Playing track"+ songNumber));
-  Serial.println(songNumber);
-stringThree = stringOne+songNumber+stringTwo;
-musicPlayer.playFullFile("/1.mp3");
-playsong2 = true;
-playsong = false;
+
+    //track number
+    val;
+    //play each song and increase track number (val)  by  one after playing.
+switch (val) {
+
+      case 1:
+      Serial.println(" Ready Track");
+      Serial.println(val);
+          // Play one file, don't return until complete
+      musicPlayer.playFullFile("1.mp3");
+      delay(500);
+      val = val + 1;
+      Serial.println(" Ready Track");
+      Serial.println (val); 
+      break;
+
+      case 2:
+      musicPlayer.playFullFile("2.mp3");
+      val = val + 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+
+      case 3:
+      musicPlayer.playFullFile("3.mp3");
+      val = val + 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+
+      case 4:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      default:
+      Serial.println("I shouldn't be here.");
+      break;
+    }
+  }
+
+
 //if (playingMusic==false) { SongNumber++; musicPlayer.playTrack(SongNumber); }
   // Play another file in the background, REQUIRES interrupts!
  // Serial.println(F("Playing track 002"));
  // musicPlayer.startPlayingFile("/track002.mp3");
-  }
-else if (playsong == true && playsong2 == true){
-musicPlayer.playFullFile("/2.mp3");
-playsong2 = false;
-playsong3 = true;
-}
-
-else if (playsong2 == true && playsong3 == true){
-musicPlayer.playFullFile("/3.mp3");
-playsong3 = false;
-}
 
     }
   // File is playing in the background
