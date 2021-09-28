@@ -29,7 +29,7 @@ int val = 1;
 //Call the sensor "sensor"
 //The model of the sensor is "GP2YA41SK0F"
 //The sensor output pin is attached to the pin A0
-SharpIR sensor( SharpIR::GP2Y0A41SK0F, A0    );
+SharpIR sensor( SharpIR::GP2Y0A41SK0F, A1    );
 
 // define the pins used
 //#define CLK 13       // SPI Clock, shared with SD card
