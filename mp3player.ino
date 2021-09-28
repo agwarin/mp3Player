@@ -98,7 +98,7 @@ int distance = sensor.getDistance(); //Calculate the distance in centimeters and
 Serial.println( distance ); //Print the value to the serial monitor
 delay(10);
 
-if (distance < 4){
+if (distance < 5){
   playsong = true;
  
   if (playsong ==  true){
@@ -137,6 +137,209 @@ switch (val) {
       break;
 
       case 4:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 5:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 6:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 7:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 8:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 9:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 10:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 11:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 12:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 13:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 14:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 15:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 16:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 17:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 18:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 19:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 20:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 21:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 22:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 23:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+
+      case 24:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 25:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 26:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 27:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 28:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 29:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 30:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 31:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+      
+      case 32:
+      musicPlayer.playFullFile("4.mp3");
+      val = 1;
+      Serial.println(" Ready Track");
+      Serial.println (val);
+      break;
+   
+      case 33:
       musicPlayer.playFullFile("4.mp3");
       val = 1;
       Serial.println(" Ready Track");
